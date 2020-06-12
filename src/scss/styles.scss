@@ -1,2 +1,139 @@
 // Here goes your CSS
 @import 'layout/main';
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+
+.popup {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 20vw;
+    min-width: 280px;
+    height: 45vh;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 60px 25px;
+}
+
+#close-popup-form {
+    position: absolute;
+    font-size: 30px;
+    left: 100%;
+    top:  0;
+    transform: translate(-80%, -20%);
+    border: none;
+    cursor: pointer; 
+}
+
+.popup form h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
+
+#mail,
+#password {
+    width: 100%;
+    height: 50px;
+    border-radius: none;
+    border: 1px solid black;
+    text-indent: 12px;
+}
+
+.submit {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: none;
+    transition: .5s;
+}
+
+.submit:hover {
+    background-color: pink;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 17px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border: 1px solid black;
+
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.success-message {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Lobster', cursive;
+    font-size: 42px;
+    height: 60px;
+    outline: none;
+    padding: 0 20px;
+    transition: transform .5s ease;
+    display: none;
+
+}
